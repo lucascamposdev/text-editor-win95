@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="desktop-icon-box" onclick="closeApp()">
+        <img src="img/icon.svg" alt="">
+        <p>Presto Notepad</p>
+    </div>
+    <main class="app-container">
+        <main class="app">
+            
+            <header>
+                <i class="fa-sharp fa-regular fa-newspaper win-icon"></i>
+
+                <p class="win-name">Presto Notepad - C:\WINDOWS</p>
+
+                <div class="win-btn-container">
+                    <div class="win-btn-box maximize-btn-container" onclick="maximize()">
+                        <i class="fa-sharp fa-regular fa-window-maximize win-btn"></i>
+                    </div>
+                    <div class="win-btn-box" onclick="closeApp()">
+                        <i class="fa-sharp fa-solid fa-xmark win-btn"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="tools-container">
+                <div class="tools-wrapper">
+                    <button id="bold" class="option-button format">
+                        <i class="fa-solid fa-bold"></i>
+                    </button>
+                    <button id="superscript" class="option-button script">
+                        <i class="fa-solid fa-superscript"></i>
+                    </button>
+                    <button id="subscript" class="option-button script">
+                        <i class="fa-solid fa-subscript"></i>
+                    </button>
+
+                    <button id="insertOrderedList" class="option-button">
+                        <i class="fa-solid fa-list-ol"></i>
+                    </button>
+                    <button id="insertUnorderedList" class="option-button">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+
+                    <button id="undo" class="option-button">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </button>
+                    <button id="redo" class="option-button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+
+                    <button id="createLink" class="option-button">
+                        <i class="fa fa-link"></i>
+                    </button>
+                    <button id="unlink" class="option-button">
+                        <i class="fa fa-unlink"></i>
+                    </button>
+
+                    <button id="justifyLeft" class="option-button">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button id="justifyCenter" class="option-button">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button id="justifyRight" class="option-button">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                    <button id="justifyFull" class="option-button">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
+                    <button id="indent" class="option-button">
+                        <i class="fa-solid fa-indent"></i>
+                    </button>
+                    <button id="outdent" class="option-button">
+                        <i class="fa-solid fa-outdent"></i>
+                    </button>
+                    <select id="formatBlock" class="adv-option-button">
+                        <option value="H1" class="select-option">H1</option>
+                        <option value="H2" class="select-option">H2</option>
+                        <option value="H3" class="select-option">H3</option>
+                        <option value="H4" class="select-option">H4</option>
+                        <option value="H5" class="select-option">H5</option>
+                        <option value="H6" class="select-option">H6</option>
+                    </select>
+                    <select id="fontName" class="adv-option-button"></select>
+                    <select id="fontSize" class="adv-option-button"></select>
+
+                    <div class="color-wrapper">
+                        <input type="color" id="foreColor" class="color adv-option-button color">
+                        <label for="foreColor">Font Color</label>
+                    </div>
+                </div>
+                <div id="text-input" contenteditable="true"></div>
+            </div>
+        </main>
+    </main>
+
+</body>
+<script src="app.js"></script>
+
+</html>

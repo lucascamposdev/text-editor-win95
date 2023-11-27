@@ -1,0 +1,194 @@
+@font-face { font-family: windows; src: url('fonts/W95FA.otf'); } 
+
+:root {
+    --grey: #c0c0c0;
+    --blue: #000080;
+}
+
+*{
+    margin: 0;
+    pad: 0;
+}
+
+body{
+    height: 100vh;
+    background: url('img/bg.jpg');
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Desktop Icon */
+.desktop-icon-box{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.desktop-icon-box img{
+    width: 60px;
+}
+.desktop-icon-box p{
+    font-family: windows;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.desktop-icon-box:active{
+    background: rgba(255, 255, 255, 0.448);
+}
+
+/* Window */
+.app-container{
+    height: 100vh;
+    width: 100vw;
+
+    scale: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    transition: all .3s ease-in-out;
+}
+
+.app{
+    height: 575px; 
+    width: 750px;
+
+    background: var(--grey);
+    border-style: outset;
+
+    transition: all .3s ease-in-out;
+}
+
+/* Window Header */
+.app header{
+    background: var(--blue);
+    margin: 3px;
+    height: 6%;
+
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: windows;
+}
+
+.win-icon{
+    margin: 0px 10px;
+    text-align: center;
+}
+.win-name{
+    flex-grow: 2;
+    overflow: hidden;
+}
+
+.win-btn-container{
+    height:80%;
+    display: flex;
+    flex-grow: .1;
+    margin-right: .1%;
+}
+.win-btn-box{
+    width: 100%;
+    margin: 0px 2px;
+
+    background: var(--grey);
+    border-style: outset;
+    cursor: pointer;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.win-btn-box:active{
+    background: white;
+}
+
+/* Tools Container */
+.tools-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px; 
+    height: 93%;
+}
+
+/* Tools Wrapper */
+.tools-wrapper{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.option-button,
+.adv-option-button{
+    min-height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-style: outset;
+    font-size: 20px;
+}
+.option-button:active,
+.adv-option-button:active{
+    background: white;
+}
+.adv-option-button{
+    padding: 0px 5px;
+}
+
+#fontName{
+    grid-column: 1/4;
+}
+
+.color-wrapper{
+    font-family: windows;
+    display: flex;
+    align-items: center;
+    border-style: outset;
+
+    grid-column: 5/9;
+}
+.color{
+    margin-right: 10px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Input Area */
+#text-input{
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    margin: 5px 0px;
+}
+
+#text-input:focus{
+    outline: none;
+}
+
+/* TOGGLES *******************/
+.biggerIcon{
+    font-size: 200%;
+    transition: all .1s ease-in-out;
+}
+.biggerScreen{
+    height: 100%;
+    width: 100%;
+}
+.selectedButton{
+    background: white;
+}
+.closeApp{
+    scale: 0;
+}
+/* TOGGLES *******************/
